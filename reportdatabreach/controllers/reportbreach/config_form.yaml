@@ -1,0 +1,11 @@
+name: ReportBreach
+modelClass: MaheshKS\ReportDataBreach\Models\DataBranch
+form: $/maheshks/reportdatabreach/models/databranch/fields.yaml
+defaultRedirect: maheshks/reportdatabreach/reportbreach
+create:
+    redirect: 'maheshks/reportdatabreach/reportbreach/update/:id'
+    redirectClose: maheshks/reportdatabreach/reportbreach
+update:
+    redirect: maheshks/reportdatabreach/reportbreach
+    redirectClose: maheshks/reportdatabreach/reportbreach
+preview: {  }

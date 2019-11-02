@@ -1,0 +1,123 @@
+<form
+    id="report-data-breach" @submit="saveButton">
+  <!-- 
+  data-request="{{ __SELF__ }}::onSaveBreach"
+    data-request-update="'{{ __SELF__ }}::list': '#result'"
+    data-request-success="$('#input-item').val('')"
+    data-request-flash
+  -->
+  <div class="text-success" v-if="successfullySent" v-cloak>Successfully saved</div>
+  <div class="text-danger" v-if="formError.common" v-cloak>Report Breach back end setting has some error please check it</div>
+    {% if __SELF__.property('full') == 1 %}
+    <div class="report-page">
+      <div class="report-cntnt">
+        <form>
+          <div class="row">
+          <div class="col-sm-6">
+          <div class="form-report" v-bind:class="{ 'has-error': formError.organization}">
+            <label for="organization">Organization</label>
+            <input type="text" v-model="organization" class="form-control" name="organization" placeholder="Organization" id="organization">
+          </div>
+          </div>
+           <div class="col-sm-6">
+          <div class="form-report" v-bind:class="{ 'has-error': formError.pdb}">
+            <label for="pdb">Possible Date of Breach</label>
+            <input type="text" v-model="pdb" class="form-control" name="pdb" placeholder="Possible Date of Breach" id="pdb">
+          </div>
+        </div>
+         <div class="col-sm-6">
+          <div class="form-report" v-bind:class="{ 'has-error': formError.nrb}">
+            <label for="nrb">Number  of Records Breached</label>
+            <input type="text" v-model="nrb" class="form-control" name="nrb" placeholder="Number  of Records Breached" id="nrb">
+          </div>
+        </div>
+         <div class="col-sm-6">
+          <div class="form-report" v-bind:class="{ 'has-error': formError.wru}">
+            <label for="wru">Website Referece URL</label>
+            <input type="text" v-model="wru"  class="form-control" name="wru" placeholder="Website Referece URL" id="wru">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-report"  v-bind:class="{ 'has-error': formError.sou}">
+            <label for="sou">Source of Breach</label>
+            <select v-model="sou"  name="sou" id="sou" class="form-control" >
+              <option value="Select one if known">Select one if known</option>
+                <option value="Organization 1">Organization 1</option>
+                <option value="Organization 2">Organization 2</option>
+            </select>
+          </div>
+        </div>
+         <div class="col-sm-6">
+          <div class="form-report"  v-bind:class="{ 'has-error': formError.tob}">
+              <label for="tob">Type of Breach</label>
+              <select v-model="tob"  name="tob" id="tob" class="form-control">
+                <option value="Select one if known">Select one if known</option>
+                 <option value="Organization 1">Organization 1</option>
+                  <option value="Organization 2">Organization 2</option>
+              </select>
+          </div>
+        </div>
+         <div class="col-sm-6">
+          <div class="form-report" v-bind:class="{ 'has-error': formError.comments}">
+              <label for="comments">Comments</label>
+              <textarea v-model="comments" class="form-control" name="comments" id="comments" placeholder="Comments"></textarea>
+          </div>
+        </div>
+         <div class="col-sm-12">
+          <div class="policy">By submitting this form I agree to receive information from Gemalto and its affiliates as described in our <span>Privacy Statement.</span></div>
+          <div class="report-submit">            
+            <button type="submit" class="red btn" v-bind:class="{ 'oc-loading': loading}"    :disabled="loading">Send Notice</button>              
+          </div>
+        </div>
+      </div>
+        </form>
+      </div>
+    </div>
+    
+    {% else %}
+    <div class="report-cntnt"> 
+          
+      <div class="form-report" v-bind:class="{ 'has-error': formError.organization}">
+        <label for="organization">Organization</label>
+        <input type="text" v-model="organization" class="form-control" name="organization" placeholder="Organization" id="organization">
+      </div>
+      <div class="form-report" v-bind:class="{ 'has-error': formError.pdb}">
+        <label for="pdb">Possible Date of Breach</label>
+        <input type="text" v-model="pdb" class="form-control" name="pdb" placeholder="Possible Date of Breach" id="pdb">
+      </div>
+      <div class="form-report" v-bind:class="{ 'has-error': formError.nrb}">
+        <label for="nrb">Number  of Records Breached</label>
+        <input type="text" v-model="nrb" class="form-control" name="nrb" placeholder="Number  of Records Breached" id="nrb">
+      </div>
+      <div class="form-report" v-bind:class="{ 'has-error': formError.wru}">
+        <label for="wru">Website Referece URL</label>
+        <input type="text" v-model="wru"  class="form-control" name="wru" placeholder="Website Referece URL" id="wru">
+      </div>
+      <div class="form-report" v-bind:class="{ 'has-error': formError.sou}">
+        <label for="sou">Source of Breach</label>
+       <select name="sou" v-model="sou" id="sou" class="form-control">
+         <option value="Select one if known">Select one if known</option>
+          <option value="Organization 1">Organization 1</option>
+           <option value="Organization 2">Organization 2</option>
+       </select>
+      </div>
+      <div class="form-report" v-bind:class="{ 'has-error': formError.tob}">
+        <label for="tob">Type of Breach</label>
+       <select name="tob" v-model="tob" id="tob" class="form-control">
+         <option value="Select one if known">Select one if known</option>
+          <option value="Organization 1">Organization 1</option>
+           <option value="Organization 2">Organization 2</option>
+       </select>
+      </div>
+      <div class="form-report"  v-bind:class="{ 'has-error': formError.comments}">
+        <label for="comments">Comments</label>
+        <textarea v-model="comments"  name="comments" class="form-control" id="comments" placeholder="Comments"></textarea>
+      </div>
+      <div class="report-submit">
+          <button type="submit" class="red btn" v-bind:class="{ 'oc-loading': loading}"    :disabled="loading">Send Notice</button>              
+      </div>
+    
+  </div>
+    {% endif %}  
+    
+</form>

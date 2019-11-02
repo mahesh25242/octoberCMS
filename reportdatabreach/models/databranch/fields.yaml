@@ -1,0 +1,46 @@
+fields:
+    organization:
+        label: Organization
+        span: auto
+        placeholder: Organization
+        cssClass: ''
+        type: text
+    date_of_breach:
+        label: 'Possible Date of Breach'
+        span: auto
+        placeholder: 'Possible Date of Breach'
+        type: text
+    no_record_breach:
+        label: 'Number of Records Breached'
+        span: auto
+        placeholder: 'Number of Records Breached'
+        type: text
+    web_site_ref_url:
+        label: 'Website Referece URL'
+        span: auto
+        type: text
+    source_of_breach:
+        label: 'Source of Breach'
+        options:
+            'Organization 1': 'Organization 1'
+            'Organization 2': 'Organization 2'
+        emptyOption: 'Select one if known'
+        showSearch: true
+        span: auto
+        placeholder: 'Source of Breach'
+        type: dropdown
+    type_of_breach:
+        label: 'Type of Breach'
+        options:
+            'Organization 1': 'Organization 1'
+            'Organization 2': 'Organization 2'
+        emptyOption: 'Select one if known'
+        showSearch: true
+        span: auto
+        type: dropdown
+    comments:
+        label: Comments
+        size: ''
+        span: auto
+        placeholder: Comments
+        type: richeditor

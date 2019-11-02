@@ -1,0 +1,45 @@
+fields:
+
+    start_breach_number:
+        span: left
+        label: 'Breach Start Number'
+        commentAbove: 'Breach Start Number'
+        type: text
+    breach_in_second:
+        span: right
+        label: 'Breach In Second'
+        commentAbove: 'Breach In Per Seconds'
+        
+     
+        
+
+
+    #start_breach_intervel:
+    #    span: right
+    #    label: 'Breach Intervel'
+    #    commentAbove: 'Breach refresh intervel in seconds'
+    #    type: text
+
+    #recaptcha_settings.section:
+    #    label:  'Recaptcha'
+    #    type: section
+    #    comment:  'Recaptcha Section'
+
+    #recaptcha_enabled:
+    #    label: 'Enable Recaptcha'
+    #    commentAbove: 'Enable Recaptcha'
+    #    type: switch
+
+    #site_key:
+    #    label: "Site Key"
+    #    commentAbove: "Site Key"
+    #    span: left
+    #    type: text
+    #secret_key:
+    #    label: "Secret Key"
+    #    commentAbove: "Secret Key"
+    #    span: right
+    #    type: text
+
+
+

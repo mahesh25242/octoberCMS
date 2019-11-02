@@ -1,0 +1,15 @@
+plugin:
+    name: 'maheshks.contactus::lang.plugin.name'
+    description: 'maheshks.contactus::lang.plugin.description'
+    author: 'mahesh K S'
+    icon: oc-icon-adn
+    homepage: ''
+permissions:
+    contactUs:
+        tab: 'maheshks.contactus::lang.contact_us'
+        label: 'Contact Us'
+navigation:
+    main-menu-item:
+        label: 'maheshks.contactus::lang.Contact Us'
+        url: maheshks/contactus/contactus
+        icon: icon-align-right

@@ -1,0 +1,24 @@
+columns:
+    organization:
+        label: Organization
+        type: text
+        searchable: true
+        sortable: true
+    date_of_breach:
+        label: 'Possible Date of Breach'
+        type: text
+    no_record_breach:
+        label: 'Number of Records Breached'
+        type: text
+    web_site_ref_url:
+        label: 'Website Referece URL'
+        type: text
+    source_of_breach:
+        label: 'Source of Breach'
+        type: text
+    type_of_breach:
+        label: 'Type of Breach'
+        type: text
+    comments:
+        label: Comments
+        type: text

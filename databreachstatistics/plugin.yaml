@@ -1,0 +1,6 @@
+plugin:
+    name: 'maheshks.databreachstatistics::lang.plugin.name'
+    description: 'maheshks.databreachstatistics::lang.plugin.description'
+    author: 'mahesh k s'
+    icon: oc-icon-adjust
+    homepage: ''

@@ -1,0 +1,33 @@
+fields:
+
+    report_breach_to_email:
+        span: left
+        label: 'Email'
+        commentAbove: 'Report breach notification email will sent to this email'
+        type: text
+
+    
+
+    #recaptcha_settings.section:
+    #    label:  'Recaptcha'
+    #    type: section
+    #    comment:  'Recaptcha Section'
+
+    #recaptcha_enabled:
+    #    label: 'Enable Recaptcha'
+    #    commentAbove: 'Enable Recaptcha'
+    #    type: switch
+
+    #site_key:
+    #    label: "Site Key"
+    #    commentAbove: "Site Key"
+    #    span: left
+    #    type: text
+    #secret_key:
+    #    label: "Secret Key"
+    #    commentAbove: "Secret Key"
+    #    span: right
+    #    type: text
+
+
+

@@ -1,0 +1,17 @@
+plugin:
+    name: 'maheshks.reportdatabreach::lang.plugin.name'
+    description: 'maheshks.reportdatabreach::lang.plugin.description'
+    author: 'mahesh k s'
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'REPORTED BREACH'
+        url: maheshks/reportdatabreach/reportbreach
+        icon: icon-life-ring
+        permissions:
+            - report_breach
+permissions:
+    report_breach:
+        tab: 'maheshks.reportdatabreach::lang.report_breach'
+        label: 'Report Breach'
